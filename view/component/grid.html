@@ -1,0 +1,259 @@
+<div class="pear-container">
+    <header>
+        <h1>精选商品のご紹介</h1>
+        <p class="subtitle">厳選された高品質商品で、お客様のニーズにお応えします。</p>
+    </header>
+
+    <!--    <div class="content">-->
+    <!--        <div class="filter-bar">-->
+    <!--            <div class="filter-title">商品筛选</div>-->
+    <!--            <div class="filter-options">-->
+    <!--                <button class="layui-btn layui-btn-primary">全部商品</button>-->
+    <!--                <button class="layui-btn layui-btn-primary">热销商品</button>-->
+    <!--                <button class="layui-btn layui-btn-primary">新品上市</button>-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+    <div class="product-grid">
+        <!-- 商品1 -->
+        <div class="product-card">
+            <img src="./admin/images/shoutao1.jpg" style="width: 100%; height: auto" alt="作業用手袋" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">作業用手袋</h3>
+                <div class="product-price">¥ 1,299</div>
+                <p class="product-description">高品質素材、通気性と柔軟性に優れた素材を採用し、長時間の使用でも快適です。優れたフィット感、人間工学に基づいた設計で、手にしっかりとフィットします。</p>
+                <div class="product-actions">
+                    <!--                        <button class="layui-btn btn-detail">查看详情</button>-->
+                    <!--                        <button class="layui-btn btn-cart">加入购物车</button>-->
+                </div>
+            </div>
+        </div>
+
+        <!-- 商品2 -->
+        <div class="product-card">
+            <img src="./admin/images/shoutao2.jpg" style="width: 100%; height: auto" alt="スポーツ用手袋" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">スポーツ用手袋</h3>
+                <div class="product-price">¥ 1,099</div>
+                <p class="product-description">人間工学に基づいた立体設計で、手の動きを妨げず、長時間の使用にも最適。多用途デザイン、通勤・通学・アウトドア・サイクリング・登山など、さまざまなシーンで活躍。</p>
+                <div class="product-actions">
+                    <!--                        <button class="layui-btn btn-detail">查看详情</button>-->
+                    <!--                        <button class="layui-btn btn-cart">加入购物车</button>-->
+                </div>
+            </div>
+        </div>
+
+        <!-- 商品3 -->
+        <div class="product-card">
+            <img src="./admin/images/shoutao3.jpg" style="width: 100%; height: auto" alt="防寒手袋" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">防寒手袋</h3>
+                <div class="product-price">¥ 899</div>
+                <p class="product-description">高品質な素材と優れた保温設計により、冷気をシャットアウトし、長時間の使用でも暖かさをキープします。</p>
+                <div class="product-actions">
+                    <!--                        <button class="layui-btn btn-detail">查看详情</button>-->
+                    <!--                        <button class="layui-btn btn-cart">加入购物车</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<style>
+    .grid-demo {
+        padding: 10px;
+        line-height: 60px;
+        border-radius: var(--global-border-radius);
+        background-color: var(--global-primary-color);
+        text-align: center;
+        color: #fff;
+        min-height: 60px;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Microsoft YaHei', sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    header {
+        background: linear-gradient(to right, #1E9FFF, #2D8CF0);
+        color: white;
+        padding: 30px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .subtitle {
+        font-size: 18px;
+        opacity: 0.9;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .product-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 1px solid #eee;
+    }
+
+    .product-info {
+        padding: 20px;
+    }
+
+    .product-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        color: #FF5722;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .product-description {
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .product-actions {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-detail {
+        background: linear-gradient(to right, #1E9FFF, #2D8CF0);
+        color: white;
+    }
+
+    .btn-cart {
+        background: linear-gradient(to right, #FFB800, #FF9800);
+        color: white;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f9fa;
+        color: #666;
+        font-size: 14px;
+        border-top: 1px solid #eee;
+    }
+
+    .filter-bar {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .filter-options {
+        display: flex;
+        gap: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .filter-bar {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<!--<script src="https://cdn.jsdelivr.net/npm/layui@2.6.8/dist/layui.js"></script>-->
+<script>
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer;
+        var form = layui.form;
+
+        // 查看详情按钮事件
+        document.querySelectorAll('.btn-detail').forEach(button => {
+            button.addEventListener('click', function() {
+                var title = this.closest('.product-card').querySelector('.product-title').textContent;
+                layer.msg('查看 ' + title + ' 详情');
+            });
+        });
+
+        // 加入购物车按钮事件
+        document.querySelectorAll('.btn-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                var title = this.closest('.product-card').querySelector('.product-title').textContent;
+                layer.msg(title + ' 已加入购物车');
+            });
+        });
+    });
+</script>

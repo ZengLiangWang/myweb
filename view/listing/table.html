@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+<!--    <title>table 组件综合演示 - Layui</title>-->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #1E9FFF, #2D8CF0);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1E9FFF;
+            font-size: 28px;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .business-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .business-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .business-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .business-info {
+            padding: 25px;
+        }
+
+        .business-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1E9FFF;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .business-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .business-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .business-features {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        .business-features li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .business-features li:before {
+            content: "✓";
+            color: #52c41a;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .business-link {
+            display: inline-block;
+            background: linear-gradient(to right, #1E9FFF, #2D8CF0);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .business-link:hover {
+            background: linear-gradient(to right, #2D8CF0, #1E9FFF);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #f8f9fa;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>潤宇株式会社の事業紹介</h1>
+        <p class="subtitle">お客様に包括的な専門サービスを提供することに尽力しています</p>
+    </header>
+
+    <div class="content">
+        <h2 class="section-title">当社のコア事業</h2>
+
+        <div class="business-grid">
+            <!-- 业务1 -->
+            <div class="business-card">
+                <img src="./admin/images/shiye1.jpg" alt="輸出入貿易業務" class="business-image">
+                <div class="business-info">
+                    <h3 class="business-title">
+                        <i class="layui-icon business-icon">&#xe63c;</i>
+                        輸出入貿易業務
+                    </h3>
+                    <p class="business-description">
+                        当社は、化粧品、家電、文房具、玩具、食料品、中古車など多岐にわたる商品の輸出入および販売を行っています。高品質な製品と豊富なラインアップを提供し、安全で信頼できる取引を重視しています。お客様のニーズに応えるため、誠実なビジネスを心がけています。
+                    </p>
+                    <ul class="business-features">
+                        <li>高品質な製品の提供</li>
+                        <li>多彩な商品ラインアップ</li>
+                        <li>安全で信頼できる取引</li>
+                    </ul>
+<!--                    <a href="#" class="business-link">了解更多</a>-->
+                </div>
+            </div>
+
+            <!-- 业务2 -->
+            <div class="business-card">
+                <img src="./admin/images/shiye2.jpg" alt="運送サービス" class="business-image">
+                <div class="business-info">
+                    <h3 class="business-title">
+                        <i class="layui-icon business-icon">&#xe62c;</i>
+                        運送サービス
+                    </h3>
+                    <p class="business-description">
+                        弊社は、中国から日本への物流ソリューションを提供し、小型貨物から大口商品まで対応します。近代的な倉庫施設と先進的な管理システムを備え、貨物の保管、仕分け、包装、配送などの柔軟なサービスを提供します。お客様に便利なワンストップソリューションを目指しています。
+                    </p>
+                    <ul class="business-features">
+                        <li>運送サービス</li>
+                        <li>倉庫施設</li>
+                    </ul>
+<!--                    <a href="#" class="business-link">了解更多</a>-->
+                </div>
+            </div>
+
+            <!-- 业务3 -->
+            <div class="business-card">
+                <img src="./admin/images/shiye3.jpg" alt="その他" class="business-image">
+                <div class="business-info">
+                    <h3 class="business-title">
+                        <i class="layui-icon business-icon">&#xe621;</i>
+                        その他
+                    </h3>
+                    <p class="business-description">
+                        当社は専門的な通関サービス、物流仲介、コンサルティングを提供し、貨物のスムーズな通関と物流コストの最適化を支援します。経験豊富なチームが適切な運送会社の選定や物流プランの提案を行い、顧客のニーズに応えます。
+                    </p>
+                    <ul class="business-features">
+                        <li>通関業務</li>
+                        <li>仲介サービス</li>
+                        <li>コンサルティングサービス</li>
+                    </ul>
+<!--                    <a href="#" class="business-link">了解更多</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // 页面加载完成后执行
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     // 使用LayUI组件
+    //     layui.use(['element', 'layer'], function(){
+    //         var element = layui.element;
+    //         var layer = layui.layer;
+    //
+    //         // 为"了解更多"链接添加点击事件
+    //         document.querySelectorAll('.business-link').forEach(link => {
+    //             link.addEventListener('click', function(e) {
+    //                 e.preventDefault();
+    //                 var title = this.closest('.business-card').querySelector('.business-title').textContent;
+    //                 layer.msg('即将跳转到 ' + title + ' 详情页面');
+    //             });
+    //         });
+    //     });
+    // });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+[
+	{
+		"id": 1,
+		"title": "潤宇株式会社",
+		"icon": "layui-icon layui-icon-home",
+		"type": 1,
+		"openType": "_component",
+		"href": "view/console/index.html"
+	},
+	{
+		"id": 2,
+		"title": "セレクト商品",
+		"icon": "layui-icon layui-icon-cart",
+		"type": 1,
+		"openType": "_component",
+		"href": "view/component/grid.html"
+
+	},
+	{
+		"id": 4,
+		"title": "事業内容",
+		"icon": "layui-icon layui-icon-template-1",
+		"type": 1,
+		"openType": "_component",
+		"href": "view/listing/table.html"
+
+	},
+	{
+		"id": 3,
+		"title": "お問合せ",
+		"icon": "layui-icon layui-icon-email",
+		"type": 1,
+		"openType": "_component",
+		"href": "view/component/toast.html"
+
+	},
+	{
+		"id": 6,
+		"title": "プライバシーポリシー",
+		"icon": "layui-icon layui-icon-vercode",
+		"type": 1,
+		"openType": "_component",
+		"href": "view/analysis/yinsi.html"
+
+	}
+
+
+]

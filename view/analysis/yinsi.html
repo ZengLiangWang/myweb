@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--    <title>table 组件综合演示 - Layui</title>-->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #1E9FFF, #2D8CF0);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro-text {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 4px solid #1E9FFF;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+        }
+
+        .policy-title {
+            color: #1E9FFF;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .policy-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(to right, #1E9FFF, #2D8CF0);
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .policy-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            line-height: 1.8;
+        }
+
+        .policy-content p {
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #f8f9fa;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-info {
+            background-color: #e6f7ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid #1E9FFF;
+        }
+
+        .contact-title {
+            color: #1E9FFF;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .contact-details {
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .policy-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>個人情報保護方針</h1>
+        <p class="subtitle">潤宇株式会社</p>
+    </header>
+
+    <div class="content">
+        <div class="intro-text">
+            当社は、以下の方針にて、お客様の個人情報・特定個人情報を適切に取り扱うように努めます。
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-title">
+                <span class="policy-number">1</span>
+                法令等の遵守
+            </h2>
+            <div class="policy-content">
+                <p>当社は、「マイナンバー法」、「個人情報の保護に関する法律」その他法令および「特定個人情報の適正な取扱いに関するガイドライン（事業者編）」・社内規程等を遵守して、個人情報・特定個人情報の適正な取扱いを行います。</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-title">
+                <span class="policy-number">2</span>
+                個人情報の取得・利用
+            </h2>
+            <div class="policy-content">
+                <p>当社は、お客様もしくはお取引先様または社員等から直接書面等により個人情報を取得する場合、その利用目的を明示し、それ以外の場合についても、その利用目的を通知または公表いたします。</p>
+                <p>当社は、お客様もしくはお取引先様または社員等の事前の同意がある場合、または法令により許される場合以外に、利用目的の達成に必要な範囲を超えて、お客様もしくはお取引先様または社員等の個人情報を利用いたしません。</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-title">
+                <span class="policy-number">3</span>
+                個人情報の管理
+            </h2>
+            <div class="policy-content">
+                <p>当社は、個人情報の漏洩・滅失または毀損を防止するために必要な措置を講じて、お客様もしくはお取引先様または社員等の個人情報を適切に管理いたします。</p>
+                <p>当社は、お客様もしくはお取引先様または社員等の個人情報の取り扱いに関して、従業者等に対して適切な監督を行うとともに、お客様もしくはお取引先様または社員等の個人情報の取り扱いを委託する場合にも、委託先に対しても個人情報を適切に管理するよう監督いたします。</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-title">
+                <span class="policy-number">4</span>
+                個人情報の第三者への提供
+            </h2>
+            <div class="policy-content">
+                <p>当社は、お客様もしくはお取引先様または社員等の事前の同意がある場合（利用目的の達成に必要な範囲内で個人情報を委託する場合を含む）、また法令により許される場合以外に、お客様もしくはお取引先様または社員等の個人情報を第三者に提供いたしません。</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-title">
+                <span class="policy-number">5</span>
+                個人情報の開示、訂正、利用停止等
+            </h2>
+            <div class="policy-content">
+                <p>お客様もしくはお取引先様または社員等が、ご自分の個人情報の利用目的の通知・開示・訂正・利用停止等を希望された場合は、お客様もしくはお取引先様または社員等のご本人からの求めであることを確認した上で、法令に従って対応いたします。</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-title">
+                <span class="policy-number">6</span>
+                特定個人情報の提供
+            </h2>
+            <div class="policy-content">
+                <p>当社は、法令により許される場合以外に、お取引先様または社員等の特定個人情報を第三者に提供いたしません。</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-title">
+                <span class="policy-number">7</span>
+                安全管理措置に関する事項
+            </h2>
+            <div class="policy-content">
+                <p>当社は、個人情報・特定個人情報について、漏洩、滅失または毀損の防止等、その管理のために必要かつ適切な安全管理措置を講じます。</p>
+                <p>また、個人情報・特定個人情報を取り扱う従業者や委託先（再委託先等を含む）に対して、必要かつ適切な監督を行います。</p>
+                <p>なお、別途「個人情報・特定個人情報安全管理規則」を制定しております。</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-title">
+                <span class="policy-number">8</span>
+                社内体制の整備
+            </h2>
+            <div class="policy-content">
+                <p>当社は、お客様もしくはお取引先様または社員等の個人情報・特定個人情報の取り扱いに関する責任者を選任し、継続的な改善を図り十分な安全管理体制を維持するよう努めます。</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-title">お問い合わせ</div>
+            <div class="contact-details">
+                個人情報に関するご質問やご相談は、下記までお問い合わせください。<br>
+                潤宇株式会社 個人情報保護管理者<br>
+                電話: 072-468-8835<br>
+                メール: privacy@junyu.co.jp
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // LayUI组件初始化
+    layui.use(['element'], function(){
+        var element = layui.element;
+
+        // 可以在这里添加更多的交互功能
+        // 例如：点击条款标题可以展开/收起内容
+    });
+</script>
+</body>
+
+</html>

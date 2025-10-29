@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>通知组件</title>
+	</head>
+	<body>
+		<div class="pear-container" style="background-image: url(./admin/images/background.svg)">
+			<div class="layui-row layui-col-space10">
+				<div class="layui-col-md12">
+					<div class="layui-card">
+						<div class="layui-card-header">お問合せ</div>
+						<div class="layui-card-body">
+							<span style="font-size: 14px; color: red;"> ご相談やサービスに関するご質問・ご要望がございましたら、 下記のフォームをご利用ください。 内容を確認後、担当者がご連絡いたします。</span>
+						</div>
+						<div class="layui-card-body">
+							<form class="layui-form" action="" id="contactForm">
+								<div class="layui-form-item">
+									<label class="layui-form-label">お名前 (必須)</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<label class="layui-form-label">メールアドレス (必須)</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<label class="layui-form-label">電話番号 (必須)</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<label class="layui-form-label">題名 (必須)</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-form-item layui-form-text">
+									<label class="layui-form-label">メッセージ本文 (必須)</label>
+									<div class="layui-input-block">
+										<textarea name="desc" class="layui-textarea"></textarea>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-input-block">
+										<button class="layui-btn" lay-submit lay-filter="formDemo">送信</button>
+<!--										<button type="reset" class="layui-btn layui-btn-primary">リセット</button>-->
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+			</div>
+		</div>
+		</div>
+	</body>
+	<script>
+		//Demo
+		layui.use('form', function(){
+			var form = layui.form;
+
+			//提交
+			form.on('submit(formDemo)', function(data){
+				layer.msg("送信に成功しました");
+				var form1 = document.getElementById('contactForm');
+				form1.reset();
+				return false;
+			});
+		});
+	</script>
+
+</html>
